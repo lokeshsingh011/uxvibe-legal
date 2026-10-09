@@ -1,1 +1,612 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy & Legal | UXVibe Studio</title>
+  <meta name="description" content="Read the Privacy Policy, Terms of Service and Data Deletion Policy of UXVibe Studio.">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    :root {
+      --purple: #6425e8;
+      --black: #101014;
+      --muted: #707080;
+      --background: #faf9fc;
+      --border: #e9e6ef;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--black);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(#6425e808 1px, transparent 1px),
+        linear-gradient(90deg, #6425e808 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 850;
+      letter-spacing: 3px;
+      line-height: 1.1;
+      color: var(--black);
+    }
+
+    .logo span {
+      display: block;
+      margin-top: 5px;
+      font-size: 10px;
+      letter-spacing: 5px;
+      font-weight: 700;
+      border-top: 4px solid var(--purple);
+      padding-top: 5px;
+      text-align: right;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 76px 24px 65px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--purple);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.06;
+      letter-spacing: -3px;
+      max-width: 760px;
+      margin: 22px 0;
+    }
+
+    h1 span {
+      color: var(--purple);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .layout {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 42px;
+      align-items: start;
+    }
+
+    aside {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: white;
+    }
+
+    aside strong {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    aside a {
+      display: block;
+      padding: 8px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      padding: 34px;
+      margin-bottom: 26px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      scroll-margin-top: 100px;
+    }
+
+    section h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: -1px;
+      line-height: 1.3;
+    }
+
+    section h3 {
+      margin: 28px 0 8px;
+      font-size: 17px;
+    }
+
+    section p,
+    section li {
+      color: #565663;
+      font-size: 14px;
+    }
+
+    section ul {
+      padding-left: 22px;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+
+    .notice {
+      padding: 16px 18px;
+      border-left: 3px solid var(--purple);
+      background: #f6f1ff;
+      border-radius: 0 10px 10px 0;
+      font-size: 13px;
+      color: #49405c;
+      margin: 22px 0;
+    }
+
+    .contact {
+      padding: 22px;
+      background: var(--black);
+      color: white;
+      border-radius: 14px;
+    }
+
+    .contact p {
+      color: #c8c6d0;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 30px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--black);
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        margin-top: 28px;
+        gap: 20px;
+      }
+
+      aside {
+        position: static;
+      }
+
+      section {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Replace the email and date placeholders before publishing. -->
+
+  <header>
+    <div class="nav">
+      <a class="logo" href="#top" aria-label="UXVibe Studio home">
+        UXVIBE
+        <span>STUDIO</span>
+      </a>
+
+      <nav aria-label="Legal navigation">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#deletion">Data Deletion</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero grid-bg" id="top">
+    <div class="hero-inner">
+      <div class="eyebrow">UXVibe Studio · Legal Centre</div>
+      <h1>Your data.<br>Your choices.<br><span>Our responsibility.</span></h1>
+      <p>
+        Learn how UXVibe Studio handles personal information,
+        provides its services, and responds to data deletion requests.
+      </p>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside>
+      <strong>On this page</strong>
+      <a href="#privacy">01. Privacy Policy</a>
+      <a href="#terms">02. Terms of Service</a>
+      <a href="#deletion">03. Data Deletion Policy</a>
+      <a href="#contact">04. Contact Us</a>
+    </aside>
+
+    <main>
+      <!-- PRIVACY POLICY -->
+      <section id="privacy">
+        <div class="eyebrow">01 / Privacy</div>
+        <h2>Privacy Policy</h2>
+        <p class="updated">Effective date: [INSERT DATE]</p>
+
+        <p>
+          UXVibe Studio ("we", "us", or "our") respects your privacy.
+          This policy explains how we collect, use, disclose, and
+          protect personal information when you visit our website,
+          submit an enquiry or lead form, contact us, or use our services.
+        </p>
+
+        <h3>1. Information We Collect</h3>
+        <p>Depending on how you interact with us, we may collect:</p>
+        <ul>
+          <li>Contact details, such as your name, email address,
+            phone number, and business name.</li>
+          <li>Business requirements, service interests, project
+            budgets, and information you provide in enquiry forms.</li>
+          <li>Communications you send us through email, phone,
+            WhatsApp, social media, or other channels.</li>
+          <li>Technical information such as browser type, device
+            information, and website usage data where applicable.</li>
+          <li>Advertising and campaign interaction data where
+            applicable, subject to the relevant platform settings.</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <ul>
+          <li>Respond to enquiries and provide requested information.</li>
+          <li>Prepare quotations, proposals, and service plans.</li>
+          <li>Deliver and support our design, development,
+            marketing, and automation services.</li>
+          <li>Manage client relationships and communicate project updates.</li>
+          <li>Improve our website, services, and marketing effectiveness.</li>
+          <li>Maintain security, prevent misuse, and comply with legal obligations.</li>
+        </ul>
+
+        <h3>3. Advertising, Forms, and Third-Party Platforms</h3>
+        <p>
+          We may use services such as Meta platforms (Facebook and
+          Instagram), website hosting providers, analytics tools,
+          CRM systems, email providers, and messaging platforms to
+          operate our business and manage enquiries.
+        </p>
+        <p>
+          If you submit a lead form on Facebook or Instagram, the
+          information you provide may be shared with us so we can
+          respond to your request. Those platforms may also process
+          information under their own privacy policies.
+        </p>
+
+        <h3>4. WhatsApp and Communications</h3>
+        <p>
+          If you contact us through WhatsApp or provide your number
+          for follow-up, we may use that channel to respond to your
+          enquiry and provide relevant service information. We will
+          respect applicable consent requirements and your requests
+          to stop receiving marketing communications.
+        </p>
+
+        <h3>5. Sharing of Information</h3>
+        <p>
+          We do not sell personal information. We may share it with
+          service providers working on our behalf, authorised team
+          members, or other parties where necessary to deliver a
+          requested service, protect our rights, or meet legal
+          requirements. We aim to limit access to what is necessary.
+        </p>
+
+        <h3>6. Data Retention</h3>
+        <p>
+          We retain information only for as long as reasonably
+          necessary for the purposes described in this policy,
+          including responding to enquiries, maintaining business
+          records, resolving disputes, and meeting legal obligations.
+          Retention periods depend on the type of information and
+          the circumstances.
+        </p>
+
+        <h3>7. Security</h3>
+        <p>
+          We use reasonable measures intended to protect personal
+          information against unauthorised access, loss, misuse, or
+          disclosure. No method of electronic storage or transmission
+          can be guaranteed to be completely secure.
+        </p>
+
+        <h3>8. Your Choices and Rights</h3>
+        <p>
+          Subject to applicable law, you may request access to,
+          correction of, or deletion of personal information we hold
+          about you. You may also ask us to stop sending marketing
+          communications. Some information may need to be retained
+          where required by law or for legitimate recordkeeping.
+        </p>
+
+        <h3>9. Children's Privacy</h3>
+        <p>
+          Our services are intended for businesses and general
+          audiences, not for children to independently submit
+          personal information. Please contact us if you believe
+          a child has provided us with personal information.
+        </p>
+
+        <h3>10. Changes to This Policy</h3>
+        <p>
+          We may update this policy when our services or data
+          practices change. The latest version will be published
+          on this page with its effective date.
+        </p>
+      </section>
+
+      <!-- TERMS OF SERVICE -->
+      <section id="terms">
+        <div class="eyebrow">02 / Terms</div>
+        <h2>Terms of Service</h2>
+        <p class="updated">Effective date: [INSERT DATE]</p>
+
+        <p>
+          These terms apply to services provided by UXVibe Studio.
+          By engaging our services, you agree to the terms set out
+          in the relevant proposal, quotation, or written agreement.
+        </p>
+
+        <h3>1. Services</h3>
+        <p>
+          Our services may include digital marketing, social media
+          management, branding, graphic design, UI/UX design,
+          website and application development, and business
+          automation. The exact scope will be defined in writing
+          for each engagement.
+        </p>
+
+        <h3>2. Proposals and Deliverables</h3>
+        <p>
+          Proposals will describe the agreed scope, deliverables,
+          timelines, fees, and any applicable revision limits.
+          Work outside the agreed scope may require a separate
+          quotation or written approval.
+        </p>
+
+        <h3>3. Fees and Payments</h3>
+        <p>
+          Fees, payment milestones, advance payments, and due dates
+          will be specified in the relevant proposal or agreement.
+          Third-party charges, including advertising spend, paid
+          software, hosting, domains, and messaging API fees, are
+          separate unless expressly included in writing.
+        </p>
+
+        <h3>4. Client Responsibilities</h3>
+        <p>
+          Clients are responsible for providing accurate information,
+          necessary content, timely feedback, required approvals,
+          and lawful access to their accounts and systems. Delays
+          in these areas may affect delivery timelines.
+        </p>
+
+        <h3>5. Advertising and Results</h3>
+        <p>
+          Marketing performance depends on factors such as the
+          market, competition, offer, budget, audience, platform
+          decisions, and client follow-up. We do not guarantee
+          a specific number of leads, sales, revenue, rankings,
+          or return on advertising spend.
+        </p>
+
+        <h3>6. Third-Party Services</h3>
+        <p>
+          Our work may depend on external platforms and providers.
+          Their fees, availability, policies, and service changes
+          are outside our direct control. Clients must comply with
+          the terms and policies of any third-party services they use.
+        </p>
+
+        <h3>7. Intellectual Property</h3>
+        <p>
+          Ownership and usage rights for final deliverables, source
+          files, software, and other project materials will be
+          governed by the relevant written agreement and applicable
+          law. Third-party assets and pre-existing tools may remain
+          subject to their own licences.
+        </p>
+
+        <h3>8. Cancellations and Disputes</h3>
+        <p>
+          Cancellation terms, refunds, and outstanding payments will
+          be handled according to the applicable written agreement
+          and applicable law. Please contact us promptly if a
+          concern arises so that we can attempt to resolve it.
+        </p>
+
+        <h3>9. Changes to These Terms</h3>
+        <p>
+          We may update these terms from time to time. The terms
+          agreed in a specific signed proposal or contract may
+          continue to govern that engagement.
+        </p>
+      </section>
+
+      <!-- DATA DELETION -->
+      <section id="deletion">
+        <div class="eyebrow">03 / Data rights</div>
+        <h2>Data Deletion Policy</h2>
+        <p class="updated">Effective date: [INSERT DATE]</p>
+
+        <p>
+          You may request deletion of personal information held by
+          UXVibe Studio, subject to applicable legal obligations
+          and any information we are permitted or required to retain.
+        </p>
+
+        <h3>How to Request Deletion</h3>
+        <ol>
+          <li>Send an email to our privacy contact using the address
+            listed below.</li>
+          <li>Use the subject line "Personal Data Deletion Request".</li>
+          <li>Tell us which contact method or service you used and
+            provide enough information for us to identify the relevant
+            records. Please do not send passwords or unnecessary
+            sensitive information.</li>
+        </ol>
+
+        <h3>What Happens Next?</h3>
+        <p>
+          We may ask for reasonable information to verify your request.
+          We will review the request and delete or anonymise eligible
+          information within the period required by applicable law.
+          We will let you know if any information must be retained
+          and, where appropriate, explain why.
+        </p>
+
+        <div class="notice">
+          If your information was submitted through a third-party
+          platform, you may also need to manage or delete data held
+          by that platform separately.
+        </div>
+
+        <h3>Request Deletion</h3>
+        <p>
+          Email:
+          <a href="mailto:YOUR_EMAIL@example.com?subject=Personal%20Data%20Deletion%20Request">
+            YOUR_EMAIL@example.com
+          </a>
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="eyebrow">04 / Get in touch</div>
+        <h2>Questions about your data?</h2>
+        <p>
+          For privacy questions, data requests, or questions about
+          these terms, contact UXVibe Studio using the details below.
+        </p>
+
+        <div class="contact">
+          <strong>UXVibe Studio</strong>
+          <p>Privacy and legal enquiries</p>
+          <p>
+            Email:
+            <a href="mailto:YOUR_EMAIL@example.com">
+              YOUR_EMAIL@example.com
+            </a>
+          </p>
+          <p>Website: <a href="https://github.com/">GitHub Pages website</a></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <strong>UXVIBE STUDIO</strong>
+    <p>Design · Development · Marketing · Automation</p>
+    <p>© <span id="year"></span> UXVibe Studio. All rights reserved.</p>
+    <p>
+      <a href="#privacy">Privacy</a> ·
+      <a href="#terms">Terms</a> ·
+      <a href="#deletion">Data Deletion</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
